@@ -36,3 +36,25 @@ static int	ft_print_format(char special, va_list *args)
 	else if (special == '%')
 		count += ft_putchar(special);
 }
+static void	ft_convert(char special, va_list *args)
+{
+	int count;
+
+	count = 0;
+	if (special == 'c')
+		count += ft_putchar(va_arg(va, int));
+	if (special == 's')
+		count += ft_putchar(va_arg(va, char *));
+	if (special == 'p')
+		count += ft_putchar(va_arg(va, unsigned long int));
+	if (special == 'd' || str == 'i')
+		count += ft_putchar(va_arg(va, int));
+	if (special == 'u')
+		count += ft_putchar(va_arg(va, unsigned int));
+	else if (special == 'x')
+		count += ft_putchar(va_arg(va, unsigned int));
+	else if (special == 'X')
+		count += ft_putchar(va_arg(va, unsigned int));
+	else if (special == '%')
+		count += ft_putchar(special);
+}//alterar amanhã
