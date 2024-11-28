@@ -6,11 +6,11 @@
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:43:57 by guvascon          #+#    #+#             */
-/*   Updated: 2024/11/27 15:12:21 by guvascon         ###   ########.fr       */
+/*   Updated: 2024/11/28 17:54:35 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf"
+#include "ft_printf.h"
 
 static int	ft_print_format(char special, va_list *args)
 {
@@ -20,7 +20,7 @@ static int	ft_print_format(char special, va_list *args)
 	if (special == 'c')
 		count += ft_putchar(va_arg(*args, int));
 	else if (special == 's')
-		count += ft_putstr();
+		count += ft_putstr(va_arg(*args, char *));
 	else if (special == 'p')
 		count +=
 	else if (special == 'd')
@@ -36,25 +36,3 @@ static int	ft_print_format(char special, va_list *args)
 	else if (special == '%')
 		count += ft_putchar(special);
 }
-static void	ft_convert(char special, va_list *args)
-{
-	int count;
-
-	count = 0;
-	if (special == 'c')
-		count += ft_putchar(va_arg(va, int));
-	if (special == 's')
-		count += ft_putchar(va_arg(va, char *));
-	if (special == 'p')
-		count += ft_putchar(va_arg(va, unsigned long int));
-	if (special == 'd' || str == 'i')
-		count += ft_putchar(va_arg(va, int));
-	if (special == 'u')
-		count += ft_putchar(va_arg(va, unsigned int));
-	else if (special == 'x')
-		count += ft_putchar(va_arg(va, unsigned int));
-	else if (special == 'X')
-		count += ft_putchar(va_arg(va, unsigned int));
-	else if (special == '%')
-		count += ft_putchar(special);
-}//alterar amanhã

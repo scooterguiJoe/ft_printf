@@ -6,7 +6,7 @@
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 13:20:10 by guvascon          #+#    #+#             */
-/*   Updated: 2024/11/27 16:23:10 by guvascon         ###   ########.fr       */
+/*   Updated: 2024/11/28 17:58:54 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,23 @@ int	ft_printf(const char *format, ...)
 	if (!format)
 		return (0);
 	va_start(args, format);
-	if (format == '%')
+	if (format[i] == '%')
 	{
 		i++;
 		count += ft_print_format(format[i], args);
 	}
 	else
-		count += write(1, format[i], 1);
+		count += write(1, &format[i], 1);
 	i++;
 	va_end(args);
 	return (count);
 }
+
+// int main()
+// {
+// 	char *p;
+
+// 	p = NULL;
+// 	ft_printf(" NULL %s NULL \n", p);
+// 	printf(" NULL %s NULL \n", p);
+// }

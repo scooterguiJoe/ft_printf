@@ -5,18 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 13:32:15 by guvascon          #+#    #+#             */
-/*   Updated: 2024/11/26 13:37:14 by guvascon         ###   ########.fr       */
+/*   Created: 2024/11/28 16:16:14 by guvascon          #+#    #+#             */
+/*   Updated: 2024/11/28 17:54:23 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *str)
+int	ft_pustr(char *str)
 {
 	int	i;
 
 	i = 0;
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return ;	
+	}
 	while (str[i] != '\0')
 	{
 		write (1, &str[i], 1);

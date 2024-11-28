@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 15:16:01 by guvascon          #+#    #+#             */
-/*   Updated: 2024/11/26 15:18:06 by guvascon         ###   ########.fr       */
+/*   Created: 2024/11/28 16:00:49 by guvascon          #+#    #+#             */
+/*   Updated: 2024/11/28 16:28:50 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf_h"
+#include "ft_printf.h"
 
 void	ft_putnbr(int n)
 {
@@ -20,15 +20,15 @@ void	ft_putnbr(int n)
 	{
 		if (n < 0)
 		{
-			write(fd, "-", 1);
+			write(1, "-", 1);
 			n *= -1;
 		}
 		if (n > 9)
 		{
-			ft_putnbr(n / 10, fd);
-			ft_putnbr(n % 10, fd);
+			ft_putnbr(n / 10);
+			ft_putnbr(n % 10);
 		}
 		else
-			ft_putchar(n + 48, fd);
+			ft_putchar(n + 48);
 	}
 }

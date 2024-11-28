@@ -5,21 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 16:27:33 by guvascon          #+#    #+#             */
-/*   Updated: 2024/11/26 17:20:12 by guvascon         ###   ########.fr       */
+/*   Created: 2024/11/28 16:01:20 by guvascon          #+#    #+#             */
+/*   Updated: 2024/11/28 16:15:58 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_base(int nbr, char *base)
+int	ft_putnbr_base(int nbr, int base)
 {
 	int	count;
 	char	mod;
 
 	count = 0;
-	while (base[count])
+	if (nbr < 0)
+	{
+		write (1, "-", 1);
+		nbr *= -1;
 		count++;
-	if (count < 2)
-		return (0);
-}	
+	}
+	if (nbr >= 0)
+		count += ft_putnbr_base(nbr / base, base);
+	mod = (nbr % base) + 48;
+	write(1, &mod, 1);
+	count++;
+	return (count);
+}
