@@ -6,28 +6,42 @@
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 16:01:20 by guvascon          #+#    #+#             */
-/*   Updated: 2024/11/28 16:15:58 by guvascon         ###   ########.fr       */
+/*   Updated: 2024/11/29 17:32:48 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_base(int nbr, int base)
+int	ft_putnbr_base(long nbr, char *base)
 {
-	int	count;
+	int		count;
 	char	mod;
 
 	count = 0;
 	if (nbr < 0)
 	{
 		write (1, "-", 1);
-		nbr *= -1;
+		nbr = -nbr;
 		count++;
 	}
-	if (nbr >= 0)
-		count += ft_putnbr_base(nbr / base, base);
-	mod = (nbr % base) + 48;
-	write(1, &mod, 1);
+	if (nbr >= ft_strlen(base))
+	{
+		count += ft_putnbr_base(nbr / ft_strlen(base), base);
+		count += ft_putnbr_base(nbr % ft_strlen(base), base);
+	}
+	else
+	{
+		mod = base[nbr];
+		write (1, &mod, 1);
+	}
 	count++;
 	return (count);
 }
+// int main()
+// {
+// 	int count;
+
+// 	count = 0;
+//     count += ft_putnbr_base(-42, UPCASE);
+//     write(1, "\n", 1);
+// }
