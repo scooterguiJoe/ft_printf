@@ -37,15 +37,15 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-// int main()
-// {
-// 	char *p;
-
-// 	p = NULL;
-// 	ft_printf(" NULL %p NULL \n", p);
-// 	//printf(" NULL %s NULL \n", p);
-// }
  int main()
+{
+ 	char *p;
+
+ 	p = NULL;
+ 	ft_printf(" %s\n", p);
+ 	//printf(" %s\n", p);
+}
+/* int main()
 {
 	char *a;
 	char *b = "0";
@@ -99,4 +99,4 @@ int	ft_printf(const char *format, ...)
 	printf("sinal de porcentagem: %%\n");
 	printf("\n");
 
-} 
+} */

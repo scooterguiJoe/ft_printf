@@ -18,8 +18,8 @@ int	ft_print_pointer(unsigned long int n, char *base, int flag)
 	int	rmd;
 
 	count = 0;
-	if (!n)
-		write(1, "(nil)", 5);
+	if (n == 0)
+		return (write(1, "(nil)", 5));
 	if (flag != 1)
 		count += ft_putstr("0x");
 	if (n >= 16)
