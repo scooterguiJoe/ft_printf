@@ -6,30 +6,30 @@
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 18:10:41 by guvascon          #+#    #+#             */
-/*   Updated: 2024/11/29 17:34:27 by guvascon         ###   ########.fr       */
+/*   Updated: 2024/12/02 17:15:40 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
-int	ft_print_pointer(unsigned long ptr)
+int	ft_print_pointer(unsigned long int n, char *base, int flag)
 {
 	int	count;
-	char	base;
+	int	rmd;
 
 	count = 0;
-	if (!ptr)
+	if (!n)
 		write(1, "(nil)", 5);
-	count += ft_putstr("0x");
-	count += ft_putnbr_base(ptr, &base);
+	if (flag != 1)
+		count += ft_putstr("0x");
+	if (n >= 16)
+		count += ft_print_pointer(n / 16, base, 1);
+	rmd = (n % 16);
+	write(1, &base[rmd], 1);
 	count++;
 	return (count);
 }
 // int main()
 // {
-//    // char *i = "asdasdas";
-// 	printf("%p\n", NULL);
+// 	ft_print_pointer(42, "0123456789abcdef", 0);
 // }
-//quando for Null escrever nil
-//imprimir 0x
-//passar unsigned putnbrbase

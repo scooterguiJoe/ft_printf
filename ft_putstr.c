@@ -6,11 +6,11 @@
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 16:16:14 by guvascon          #+#    #+#             */
-/*   Updated: 2024/11/29 17:27:43 by guvascon         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:57:50 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 int	ft_putstr(char *str)
 {
@@ -18,9 +18,7 @@ int	ft_putstr(char *str)
 
 	i = 0;
 	if (!str)
-	{
 		write (1, "(null)", 6);
-	}
 	while (str[i] != '\0')
 	{
 		write (1, &str[i], 1);

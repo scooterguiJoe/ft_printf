@@ -6,13 +6,13 @@
 #    By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/26 13:20:05 by guvascon          #+#    #+#              #
-#    Updated: 2024/11/29 17:39:01 by guvascon         ###   ########.fr        #
+#    Updated: 2024/12/02 16:55:00 by guvascon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRCS = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_putnbr_base.c \
+SRCS = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr_base.c \
 		ft_strlen.c ft_print_format.c ft_print_pointer.c 
 
 OBJS = $(SRCS:.c=.o)

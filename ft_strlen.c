@@ -6,11 +6,11 @@
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 16:13:41 by guvascon          #+#    #+#             */
-/*   Updated: 2024/11/29 16:43:19 by guvascon         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:47:59 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 int	ft_strlen(const char *str)
 {

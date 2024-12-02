@@ -6,11 +6,11 @@
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 16:01:20 by guvascon          #+#    #+#             */
-/*   Updated: 2024/11/29 17:32:48 by guvascon         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:48:08 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 int	ft_putnbr_base(long nbr, char *base)
 {
