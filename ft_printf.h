@@ -6,12 +6,12 @@
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 13:20:02 by guvascon          #+#    #+#             */
-/*   Updated: 2024/12/02 16:45:02 by guvascon         ###   ########.fr       */
+/*   Updated: 2024/12/03 13:24:46 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdio.h>
 # include <stdlib.h>

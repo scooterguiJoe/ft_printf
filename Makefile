@@ -6,7 +6,7 @@
 #    By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/26 13:20:05 by guvascon          #+#    #+#              #
-#    Updated: 2024/12/02 16:55:00 by guvascon         ###   ########.fr        #
+#    Updated: 2024/12/03 13:25:27 by guvascon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,6 @@ OBJS = $(SRCS:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-
 
 all : $(NAME)
 $(NAME) : $(OBJS)

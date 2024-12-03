@@ -6,11 +6,11 @@
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 18:10:41 by guvascon          #+#    #+#             */
-/*   Updated: 2024/12/02 17:15:40 by guvascon         ###   ########.fr       */
+/*   Updated: 2024/12/03 13:21:32 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_print_pointer(unsigned long int n, char *base, int flag)
 {

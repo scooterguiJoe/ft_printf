@@ -6,11 +6,11 @@
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:43:57 by guvascon          #+#    #+#             */
-/*   Updated: 2024/12/02 16:47:43 by guvascon         ###   ########.fr       */
+/*   Updated: 2024/12/03 14:08:45 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_print_format(char specifier, va_list *args)
 {
@@ -37,6 +37,5 @@ int	ft_print_format(char specifier, va_list *args)
 		count += ft_putchar('%');
 	else
 		count += ft_putchar(specifier);
-	count++;
 	return (count);
 }

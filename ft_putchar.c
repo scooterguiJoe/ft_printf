@@ -6,11 +6,11 @@
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 15:59:48 by guvascon          #+#    #+#             */
-/*   Updated: 2024/12/02 16:48:11 by guvascon         ###   ########.fr       */
+/*   Updated: 2024/12/03 13:21:40 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {
