@@ -6,7 +6,7 @@
 /*   By: guvascon <guvascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 18:10:41 by guvascon          #+#    #+#             */
-/*   Updated: 2024/12/03 13:21:32 by guvascon         ###   ########.fr       */
+/*   Updated: 2024/12/05 12:49:29 by guvascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_print_pointer(unsigned long int n, char *base, int flag)
 {
 	int	count;
-	int	rmd;
+	int	mod;
 
 	count = 0;
 	if (n == 0)
@@ -24,12 +24,13 @@ int	ft_print_pointer(unsigned long int n, char *base, int flag)
 		count += ft_putstr("0x");
 	if (n >= 16)
 		count += ft_print_pointer(n / 16, base, 1);
-	rmd = (n % 16);
-	write(1, &base[rmd], 1);
+	mod = (n % 16);
+	write(1, &base[mod], 1);
 	count++;
 	return (count);
 }
-// int main()
-// {
-// 	ft_print_pointer(42, "0123456789abcdef", 0);
-// }
+int main()
+{
+	ft_print_pointer(42, LWCASE, 0);
+	write(1, "\n", 1);
+}
